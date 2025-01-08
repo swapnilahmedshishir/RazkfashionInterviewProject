@@ -8,5 +8,6 @@ clone this project:
 git clone https://github.com/swapnilahmedshishir/RazkfashionInterviewProject
 ```
 
-npm install
-npm run dev
+#### npm install
+
+#### npm run dev

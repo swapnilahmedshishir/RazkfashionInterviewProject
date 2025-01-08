@@ -53,18 +53,10 @@ const TshirtLogoDesigner = () => {
       const tshirtImage = document.getElementById("tshirtImage");
       const logoImage = document.getElementById("logoImage");
 
-      // Ensure both images are fully loaded
       await Promise.all([loadImage(tshirtImage), loadImage(logoImage)]);
-
-      // Clear the canvas
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      // Step 1: Draw the T-shirt image
       ctx.drawImage(tshirtImage, 0, 0, canvas.width, canvas.height);
-
-      // Step 2: Draw the logo image
       if (logoImage && logoRef.current) {
-        // Get logo position and size relative to canvas
         const logoBounds = logoRef.current.getBoundingClientRect();
         const canvasBounds = canvas.getBoundingClientRect();
 
@@ -167,7 +159,7 @@ const TshirtLogoDesigner = () => {
         </div>
       </div>
 
-      {/* Hidden Canvas for Final Image */}
+      {/* Canvas for Final Image */}
       <canvas ref={canvasRef} width={450} height={400} />
     </div>
   );
